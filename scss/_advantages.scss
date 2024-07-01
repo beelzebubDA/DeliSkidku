@@ -1,0 +1,98 @@
+.advantages {
+    padding-bottom: 160px;
+
+    @include mobile_big {
+        padding-bottom: 64px;
+    }
+    &_sides {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+
+        @include mobile_big {
+            gap: 32px;
+        }
+    }
+
+    &_T {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 16px;
+
+        @include mobile_big {
+            gap: 8px;
+        }
+    }
+
+    &_B {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px 4px;
+        align-items: center;
+        justify-content: start;
+
+        @include mobile_big {
+            flex-direction: column;
+        }
+    }
+
+    &_B-text {
+        color: #4C4C4C;
+        font-family: "RobotoRegular";
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        width: calc(50% - 3px);
+
+        @include mobile_big {
+            width: 100%;
+            font-size: 16px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &_B-item {
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        gap: 32px;
+        border-radius: 20px;
+        background: #FFF;
+        width: calc(25% - 3px);
+        height: 190px;
+        
+        @include mobile_big {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_B-item_info {
+        color: #2D81F7;
+        font-family: "LabGrotesqueBold";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &_B-item_text {
+        color: #4C4C4C;
+        font-family: "RobotoRegular";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 25.2px */
+
+        @include mobile_big {
+            font-size: 16px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+}

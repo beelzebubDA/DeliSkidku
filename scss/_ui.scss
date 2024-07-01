@@ -1,0 +1,142 @@
+div, a, span, p, h1, h2, h3, h4, h5, h6, ul, li, nav, * {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "RobotoRegular";
+    src: url("../fonts/Roboto-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "RobotoMedium";
+    src: url("../fonts/Roboto-Medium.woff2") format("woff2");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "RobotoBold";
+    src: url("../fonts/Roboto-Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "LabGrotesqueRegular";
+    src: url("../fonts/LabGrotesque-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "LabGrotesqueBold";
+    src: url("../fonts/LabGrotesque-Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "LabGrotesqueBlack";
+    src: url("../fonts/LabGrotesque-Black.woff2") format("woff2");
+    font-weight: 900;
+}
+
+@mixin laptop_l {
+    @media (max-width:1750px) {
+        @content;
+    }
+}
+
+@mixin mobile_big {
+    @media (max-width:1199px) {
+        @content;
+    }
+}
+
+@mixin mobile_375 {
+    @media (max-width:424px) {
+        @content;
+    }
+}
+
+@mixin mobile_320 {
+    @media (max-width:374px) {
+        @content;
+    }
+}
+
+body {
+    background: #FBFBFB;
+}
+
+.def_Text {
+    color: #202020;
+    font-family: "RobotoRegular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.container-main {
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @include mobile_big {
+        max-width: 430px;
+        padding: 0 20px;
+    }
+
+    @include mobile_375 {
+        max-width: 375px;
+    }
+
+    @include mobile_320 {
+        max-width: 320px;
+    }
+}
+
+.section_title {
+    color: #FFF;
+    text-align: center;
+    font-family: "LabGrotesqueRegular";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background: #2D81F7;
+
+    @include mobile_big {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
+.section_Mtitle {
+    color: #202020;
+    text-align: center;
+    font-family: "LabGrotesqueBlack";
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 130%;
+
+    @include mobile_big {
+        font-size: 18px;
+
+        br {
+            display: none;
+        }
+    }
+}
+
+a:hover {
+    color: var(--primary-colors-2-d-81-f-7-main-color, #2D81F7);
+}
+
+*::selection{
+    background-color: #5b8deb !important;
+    color: rgb(255, 255, 255) !important;
+    background-clip: none;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+}

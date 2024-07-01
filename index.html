@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeliSkidku.ru</title>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="https://deliskidku.ru/assets/web2/images/favicon.ico">
+
+    <!-- Choise Css -->
+    <link rel="stylesheet" href="https://deliskidku.ru/assets/web2/libs/nouisliderribute/nouislider.min.css">
+    <link rel="stylesheet" href="https://deliskidku.ru/assets/web2/libs/choices.js/public/assets/styles/choices.min.css">
+
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="https://deliskidku.ru/assets/web2/libs/swiper/swiper-bundle.min.css">
+
+    <!-- Bootstrap Css -->
+    <link href="https://deliskidku.ru/assets/web2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="https://deliskidku.ru/assets/web2/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="https://deliskidku.ru/assets/web2/css/app.min.css" rel="stylesheet" type="text/css">
+
+    <!--Custom Css-->
+    <style>
+        @media screen and (max-width: 767px) {
+            .product-base-card .discount-dates {display: flex; gap: 5px;}
+            .product-base-card .discount-dates > span {width: 100%;}
+            .product-base-card .product-footer-wrapper {background: rgba(140, 133, 246, 0.15) !important;}
+            .product-base-card .product-card-footer {flex-direction: column; gap: 8px !important;}
+        
+        
+            .product-base-card .details-btn {
+                display: block; width: 80%; margin: auto; padding: 4px;
+                color: #fff; text-align: center; background: #8c85f6;
+                border-color: transparent; border-radius: 5px;
+                -webkit-transition: all .5s ease; transition: all .5s ease;
+            }
+            .product-base-card .details-btn:hover {background: rgba(140, 133, 246, 0.8); color: #fff}
+        }
+    </style>
+    <style>:root {
+        --uim-primary-opacity: 1;
+        --uim-secondary-opacity: 0.70;
+        --uim-tertiary-opacity: 0.50;
+        --uim-quaternary-opacity: 0.25;
+        --uim-quinary-opacity: 0;
+    }
+    .uim-svg {
+        display: inline-block;
+        height: 1em;
+        vertical-align: -0.125em;
+        font-size: inherit;
+        fill: var(--uim-color, currentColor);
+    }
+    .uim-svg svg {
+        display: inline-block;
+    }
+    .uim-primary {
+        opacity: var(--uim-primary-opacity);
+    }
+    .uim-secondary {
+        opacity: var(--uim-secondary-opacity);
+    }
+    .uim-tertiary {
+        opacity: var(--uim-tertiary-opacity);
+    }
+    .uim-quaternary {
+        opacity: var(--uim-quaternary-opacity);
+    }
+    .uim-quinary {
+        opacity: var(--uim-quinary-opacity);
+    }
+    </style>
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <div class="header_block">
+            <div class="header_T">
+                <div class="header_container">
+                    <div class="header_sides">
+                        <div class="header_logo-side">
+                            <a href="#" class="header_menu-open_btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" fill="none">
+                                    <path d="M1 12C0.716667 12 0.479167 11.9042 0.2875 11.7125C0.0958333 11.5208 0 11.2833 0 11C0 10.7167 0.0958333 10.4792 0.2875 10.2875C0.479167 10.0958 0.716667 10 1 10H17C17.2833 10 17.5208 10.0958 17.7125 10.2875C17.9042 10.4792 18 10.7167 18 11C18 11.2833 17.9042 11.5208 17.7125 11.7125C17.5208 11.9042 17.2833 12 17 12H1ZM1 7C0.716667 7 0.479167 6.90417 0.2875 6.7125C0.0958333 6.52083 0 6.28333 0 6C0 5.71667 0.0958333 5.47917 0.2875 5.2875C0.479167 5.09583 0.716667 5 1 5H17C17.2833 5 17.5208 5.09583 17.7125 5.2875C17.9042 5.47917 18 5.71667 18 6C18 6.28333 17.9042 6.52083 17.7125 6.7125C17.5208 6.90417 17.2833 7 17 7H1ZM1 2C0.716667 2 0.479167 1.90417 0.2875 1.7125C0.0958333 1.52083 0 1.28333 0 1C0 0.716667 0.0958333 0.479167 0.2875 0.2875C0.479167 0.0958333 0.716667 0 1 0H17C17.2833 0 17.5208 0.0958333 17.7125 0.2875C17.9042 0.479167 18 0.716667 18 1C18 1.28333 17.9042 1.52083 17.7125 1.7125C17.5208 1.90417 17.2833 2 17 2H1Z" fill="#737373"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="header_logo">DeliSkidku.ru</a>
+                        </div>
+                        <nav class="header_nav">
+                            <a href="#" class="header_mob-menu_close-btn">
+                                <img src="./assets/imgs/x.svg" alt="x">
+                            </a>
+                            <a href="#" class="header_nav-link active def_Text">Главная</a>
+                            <a href="#" class="header_nav-link def_Text">Мероприятия</a>
+                            <a href="#" class="header_nav-link def_Text">FAQ</a>
+                            <a href="#" class="header_nav-link def_Text">О сервисе</a>
+                            <a href="#" class="header_nav-link def_Text">Контакты</a>
+                        </nav>
+                        <div class="header_actions">
+                            <a href="#" class="header_link header_link-sign-Up">Регистрация</a>
+                            <a href="#" class="header_link header_link-log-In">Войти</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_B">
+                <div class="header_container">
+                    <div class="header_B-sides">
+                        <a href="#" class="header_B-Mlink">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <mask id="mask0_2102_668" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                  <rect width="24" height="24" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_2102_668)">
+                                  <path d="M4 18C3.71667 18 3.47917 17.9042 3.2875 17.7125C3.09583 17.5208 3 17.2833 3 17C3 16.7167 3.09583 16.4792 3.2875 16.2875C3.47917 16.0958 3.71667 16 4 16C4 16 19.7167 16 20 16C20.2833 16 20.5208 16.0958 20.7125 16.2875C20.9042 16.4792 21 16.7167 21 17C21 17.2833 20.9042 17.5208 20.7125 17.7125C20.5208 17.9042 20.2833 18 20 18H4ZM4 13C3.71667 13 3.47917 12.9042 3.2875 12.7125C3.09583 12.5208 3 12.2833 3 12C3 11.7167 3.09583 11.4792 3.2875 11.2875C3.47917 11.0958 3.71667 11 4 11H20C20.2833 11 20.5208 11.0958 20.7125 11.2875C20.9042 11.4792 21 11.7167 21 12C21 12.2833 20.9042 12.5208 20.7125 12.7125C20.5208 12.9042 20.2833 13 20 13H4ZM4 8C3.71667 8 3.47917 7.90417 3.2875 7.7125C3.09583 7.52083 3 7.28333 3 7C3 6.71667 3.09583 6.47917 3.2875 6.2875C3.47917 6.09583 3.71667 6 4 6H20C20.2833 6 20.5208 6.09583 20.7125 6.2875C20.9042 6.47917 21 6.71667 21 7C21 7.28333 20.9042 7.52083 20.7125 7.7125C20.5208 7.90417 20.2833 8 20 8H4Z" fill="white"/>
+                                </g>
+                              </svg>
+                            Каталог
+                        </a>
+                        <nav class="header_B-nav">
+                            <a href="#" class="header_B-link def_Text">Двери</a>
+                            <a href="#" class="header_B-link def_Text">Окна</a>
+                            <a href="#" class="header_B-link def_Text tab">Мебель</a>
+                            <a href="#" class="header_B-link def_Text">Электрика</a>
+                            <a href="#" class="header_B-link def_Text">Сантехника</a>
+                            <a href="#" class="header_B-link def_Text">Водоснабжение</a>
+                            <a href="#" class="header_B-link def_Text">Лестницы</a>
+                            <a href="#" class="header_B-link def_Text">Интерьер</a>
+                            <a href="#" class="header_B-link def_Text tab">Освещение</a>
+                            <a href="#" class="header_B-link def_Text">Оборудование</a>
+                            <a href="#" class="header_B-link def_Text">Крепеж и фурнитура</a>
+                            <a href="#" class="header_B-link def_Text">Инструменты</a>
+                            <a href="#" class="header_B-link def_Text">Отделочные материалы</a>
+                            <a href="#" class="header_B-link def_Text">Вентиляция</a>
+                            <a href="#" class="header_B-link def_Text tab hidden">Пол</a>
+                            <a href="#" class="header_B-link def_Text tab hidden">Сантехника</a>
+                            <a href="#" class="header_B-link def_Text tab hidden">Двери</a>
+                            <a href="#" class="header_B-link def_Text tab hidden">Лаки и краски</a>
+                            <a href="#" class="header_B-link def_Text tab hidden">Текстиль</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- hero -->
+        <section class="hero">
+            <div class="container-main">
+                <div class="hero_block">
+                    <div class="hero_sides">
+                        <div class="hero_T">
+                            <div class="hero_T-sides">
+                                <div class="hero_T-events">
+                                    <span class="hero_T-events_span">Принимайте участие в мероприятиях</span>
+                                    <a href="#" class="hero_T-events_link">
+                                        <span>Все события</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="8" viewBox="0 0 17 8" fill="none">
+                                            <path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464466C12.9763 0.269204 12.6597 0.269204 12.4645 0.464466C12.2692 0.659728 12.2692 0.976311 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.7308 12.9763 7.7308 13.1716 7.53553L16.3536 4.35355ZM0 4.5H16V3.5H0V4.5Z" fill="#2D81F7"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="swiper hero_swiper">
+                                    <div class="swiper-wrapper hero_swiper-items">
+                                        <div class="swiper-slide hero_swiper-item">
+                                            <a href="#" class="hero_swiper-item_link">
+                                                <picture class="hero_swiper-item_pic">
+                                                    <img src="./assets/imgs/heroSwiperImg01.png" alt="event img 01" class="hero_swiper-item_img">
+                                                </picture>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide hero_swiper-item">
+                                            <a href="#" class="hero_swiper-item_link">
+                                                <picture class="hero_swiper-item_pic">
+                                                    <img src="./assets/imgs/heroSwiperImg02.png" alt="event img 02" class="hero_swiper-item_img">
+                                                </picture>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide hero_swiper-item">
+                                            <a href="#" class="hero_swiper-item_link">
+                                                <picture class="hero_swiper-item_pic">
+                                                    <img src="./assets/imgs/heroSwiperImg03.png" alt="event img 03" class="hero_swiper-item_img">
+                                                </picture>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide hero_swiper-item">
+                                            <a href="#" class="hero_swiper-item_link">
+                                                <picture class="hero_swiper-item_pic">
+                                                    <img src="./assets/imgs/heroSwiperImg04.png" alt="event img 04" class="hero_swiper-item_img">
+                                                </picture>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide hero_swiper-item">
+                                            <a href="#" class="hero_swiper-item_link">
+                                                <picture class="hero_swiper-item_pic">
+                                                    <img src="./assets/imgs/heroSwiperImg01.png" alt="event img 01" class="hero_swiper-item_img">
+                                                </picture>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide hero_swiper-item">
+                                            <a href="#" class="hero_swiper-item_link">
+                                                <picture class="hero_swiper-item_pic">
+                                                    <img src="./assets/imgs/heroSwiperImg02.png" alt="event img 02" class="hero_swiper-item_img">
+                                                </picture>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide hero_swiper-item">
+                                            <a href="#" class="hero_swiper-item_link">
+                                                <picture class="hero_swiper-item_pic">
+                                                    <img src="./assets/imgs/heroSwiperImg03.png" alt="event img 03" class="hero_swiper-item_img">
+                                                </picture>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide hero_swiper-item">
+                                            <a href="#" class="hero_swiper-item_link">
+                                                <picture class="hero_swiper-item_pic">
+                                                    <img src="./assets/imgs/heroSwiperImg04.png" alt="event img 04" class="hero_swiper-item_img">
+                                                </picture>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next hero_swiper-btns hero_swiper-btnN"></div>
+                                    <div class="swiper-button-prev hero_swiper-btns hero_swiper-btnP"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero_C">
+                            <h2 class="hero_C-title">DeliSkidku –<span> сервис комплектации с бонусами дизайнера  и готовой базой поставщиков</span></h2>
+                            <span class="hero_C-subtitle">Приглашаем дизайнеров, проектировщиков, архитекторов <br>и специалистов в сфере строительства</span>
+                            <a href="#" class="hero_C-link"><span>Присоединиться</span> – это бесплатно!</a>
+                        </div>
+                        <div class="hero_B">
+                            <div class="hero_B-items">
+                                <div class="hero_B-item">
+                                    <span class="hero_B-item_span">Все поставщики <br>в одном месте</span>
+                                    <span class="hero_B-item_text">Используя умные фильтры, вы видите товар сразу от всех поставщиков-партнёров, с вашим бонусом, по всем городам.</span>
+                                    <picture class="hero_B-item_pic">
+                                        <img src="./assets/imgs/heroBItemImg01.png" alt="hero Bottom img 01">
+                                    </picture>
+                                </div>
+                                <div class="hero_B-item">
+                                    <span class="hero_B-item_span">Легко комплектуйте <br>с бонусами</span>
+                                    <span class="hero_B-item_text">Любой <span>дизайнер</span> – теперь <span>комплектатор</span>! Используйте сервис и получайте бонус при работе с поставщиками партнёрами.</span>
+                                    <picture class="hero_B-item_pic">
+                                        <img src="./assets/imgs/heroBItemImg02.png" alt="hero Bottom img 02">
+                                    </picture>
+                                </div>
+                                <div class="hero_B-item">
+                                    <span class="hero_B-item_span">Один договор –регистрация</span>
+                                    <span class="hero_B-item_text">Один договор – оферта по всем поставщикам! Зарегистрировались – договор заключён!</span>
+                                    <picture class="hero_B-item_pic">
+                                        <img src="./assets/imgs/heroBItemImg03.png" alt="hero Bottom img 03">
+                                    </picture>
+                                </div>
+                                <div class="hero_B-item">
+                                    <span class="hero_B-item_span">Гарантия сделки и оплаты</span>
+                                    <span class="hero_B-item_text">Механизм "Гарантии" –поставщик получит оплату клиента после исполнения поставки. Сервис отстаивает интересы дизайнера по бонусам.</span>
+                                    <picture class="hero_B-item_pic">
+                                        <img src="./assets/imgs/heroBItemImg04.png" alt="hero Bottom img 04">
+                                    </picture>
+                                </div>
+                                <div class="hero_B-item">
+                                    <span class="hero_B-item_span">Горячая информация от поставщиков</span>
+                                    <span class="hero_B-item_text">На нашем сервисе всегда информация о текущих привлекательных условиях от всех поставщиков. <span>Здесь!</span><br> В одном месте <span>ВСЕ!</span></span>
+                                    <picture class="hero_B-item_pic">
+                                        <img src="./assets/imgs/heroBItemImg05.png" alt="hero Bottom img 05">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="hero_B-banner">
+                                <div class="hero_B-banner_item">
+                                    <span class="hero_B-banner_title">Посмотрите видео и узнайте <br>как работает сервис</span>
+                                    <picture class="hero_B-banner_bg">
+                                        <img src="./assets/imgs/bannerBgImg01.png" alt="banner bg img">
+                                    </picture>
+                                    <span class="hero_B-banner_span01"></span>
+                                    <span class="hero_B-banner_span02"></span>
+                                    <span class="hero_B-banner_span03"></span>
+                                </div>
+                                <a href="#" class="hero_B-banner_video-link">
+                                    <picture class="hero_B-banner_video-pic">
+                                        <img src="./assets/imgs/bannerVideoImg.png" alt="banner video img">
+                                    </picture>
+                                    <picture class="hero_B-banner_videoPlay-pic">
+                                        <img src="./assets/imgs/bannerVideoPlayImg.png" alt="banner video play img">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- services -->
+        <section class="our-services">
+            <div class="container-main">
+                <div class="our-services_block">
+                    <div class="our-services_T">
+                        <span class="our-services_section-title section_title">Возможности сервиса DeliSkidku</span>
+                        <h2 class="our-services_title section_Mtitle">Полный набор инструментов для реализации <br>интерьера и комплектации помещений</h2>
+                    </div>
+                    <div class="our-services_items">
+                        <div class="our-services_item">
+                            <div class="our-services_item-L">
+                                <span class="our-services_item-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                        <mask id="mask0_1538_12185" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+                                        <rect width="48" height="48" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_1538_12185)">
+                                        <path d="M16.4693 31.4693V34.8885C16.4693 35.0957 16.5447 35.2789 16.6956 35.4382C16.8465 35.5974 17.0358 35.677 17.2635 35.677C17.4801 35.677 17.6583 35.5974 17.7981 35.4382C17.9378 35.2789 18.0077 35.0957 18.0077 34.8885V31.4693H21.4269C21.6342 31.4693 21.8174 31.3957 21.9766 31.2485C22.1358 31.1013 22.2154 30.9167 22.2154 30.6947C22.2154 30.4726 22.1358 30.2898 21.9766 30.1462C21.8174 30.0026 21.6342 29.9307 21.4269 29.9307H18.0077V26.5115C18.0077 26.2966 17.9341 26.1178 17.787 25.9753C17.6398 25.8328 17.4552 25.7615 17.2331 25.7615C17.011 25.7615 16.8282 25.8328 16.6846 25.9753C16.541 26.1178 16.4693 26.2966 16.4693 26.5115V29.9307H13.05C12.835 29.9307 12.6563 30.0062 12.5138 30.1571C12.3713 30.308 12.3 30.4973 12.3 30.725C12.3 30.9417 12.3713 31.1199 12.5138 31.2596C12.6563 31.3994 12.835 31.4693 13.05 31.4693H16.4693ZM27.5846 34.0423H34.877C35.0886 34.0423 35.2645 33.9687 35.4049 33.8216C35.5452 33.6744 35.6154 33.4898 35.6154 33.2677C35.6154 33.0456 35.5455 32.8647 35.4058 32.725C35.266 32.5853 35.0898 32.5154 34.877 32.5154H27.5731C27.3615 32.5154 27.1855 32.5842 27.0452 32.7218C26.9048 32.8594 26.8346 33.0476 26.8346 33.2865C26.8346 33.5031 26.9059 33.6833 27.0484 33.8269C27.1909 33.9705 27.3697 34.0423 27.5846 34.0423ZM27.5846 28.8846H34.8654C35.0803 28.8846 35.2591 28.8092 35.4016 28.6583C35.5441 28.5074 35.6154 28.3181 35.6154 28.0904C35.6154 27.8737 35.5441 27.6955 35.4016 27.5557C35.2591 27.416 35.0803 27.3462 34.8654 27.3462H27.5846C27.3697 27.3462 27.1909 27.4197 27.0484 27.5669C26.9059 27.7141 26.8346 27.8987 26.8346 28.1208C26.8346 28.3428 26.9059 28.5257 27.0484 28.6693C27.1909 28.8128 27.3697 28.8846 27.5846 28.8846ZM31.1577 17.8L33.5385 20.1807C33.6648 20.3192 33.84 20.3949 34.064 20.4077C34.288 20.4205 34.482 20.3449 34.6461 20.1807C34.8102 19.991 34.8923 19.7936 34.8923 19.5884C34.8923 19.3833 34.7974 19.1987 34.6077 19.0346L32.2654 16.7308L34.6461 14.35C34.7846 14.2237 34.8603 14.0485 34.8731 13.8245C34.8859 13.6005 34.8102 13.4064 34.6461 13.2423C34.482 13.0782 34.2944 12.9961 34.0832 12.9961C33.872 12.9961 33.6905 13.0782 33.5385 13.2423L31.1577 15.5846L28.8154 13.2423C28.6611 13.1038 28.4789 13.0282 28.2689 13.0154C28.0589 13.0026 27.8654 13.0782 27.6884 13.2423C27.5115 13.4064 27.423 13.594 27.423 13.8052C27.423 14.0164 27.5179 14.198 27.7077 14.35L30.05 16.7308L27.7077 19.0346C27.5436 19.1985 27.4551 19.3919 27.4423 19.6147C27.4295 19.8375 27.5115 20.0262 27.6884 20.1807C27.8533 20.3449 28.0413 20.427 28.2525 20.427C28.4637 20.427 28.6513 20.3449 28.8154 20.1807L31.1577 17.8ZM13.6846 17.4808H20.8307C21.0457 17.4808 21.2245 17.4072 21.367 17.26C21.5095 17.1128 21.5807 16.9282 21.5807 16.7061C21.5807 16.4841 21.5095 16.3013 21.367 16.1577C21.2245 16.0141 21.0457 15.9423 20.8307 15.9423H13.6846C13.4585 15.9423 13.2706 16.0177 13.1208 16.1686C12.971 16.3195 12.8962 16.5088 12.8962 16.7366C12.8962 16.9532 12.971 17.1314 13.1208 17.2711C13.2706 17.4109 13.4585 17.4808 13.6846 17.4808ZM10.7692 40C10.0006 40 9.34695 39.7306 8.80815 39.1919C8.26938 38.6531 8 37.9994 8 37.2308V10.7692C8 10.0006 8.26938 9.34695 8.80815 8.80815C9.34695 8.26938 10.0006 8 10.7692 8H37.2308C37.9994 8 38.653 8.26938 39.1918 8.80815C39.7306 9.34695 40 10.0006 40 10.7692V37.2308C40 37.9994 39.7306 38.6531 39.1918 39.1919C38.653 39.7306 37.9994 40 37.2308 40H10.7692ZM10.7692 38.4616H37.2308C37.5385 38.4616 37.8205 38.3333 38.077 38.077C38.3333 37.8205 38.4616 37.5385 38.4616 37.2308V10.7692C38.4616 10.4615 38.3333 10.1795 38.077 9.92305C37.8205 9.66665 37.5385 9.53845 37.2308 9.53845H10.7692C10.4615 9.53845 10.1795 9.66665 9.92305 9.92305C9.66665 10.1795 9.53845 10.4615 9.53845 10.7692V37.2308C9.53845 37.5385 9.66665 37.8205 9.92305 38.077C10.1795 38.3333 10.4615 38.4616 10.7692 38.4616Z" fill="#2D81F7"/>
+                                        </g>
+                                        </svg>
+                                </span>
+                                <h4 class="our-services_item-title">Калькулятор-комплектаций:<br> он-лайн расчёт стоимости</h4>
+                                <div class="our-services_item-texts">
+                                    <span class="our-services_item-span">Делайте комплектацию интерьера  –  быстро и легко.</span>
+                                    <span class="our-services_item-span">Создавайте и передавайте комплектацию клиенту: <br>в формате excel, pdf или через личный кабинет.</span>
+                                    <span class="our-services_item-span">Клиенты приобретают товары, получают скидки <br>и гарантии от поставщиков, а вы автоматизируете рабочий процесс и зарабатываете.</span>
+                                </div>
+                            </div>
+                            <div class="our-services_item-R">
+                                <picture class="our-services_item-R_pic">
+                                    <img src="./assets/imgs/ourServicesImg01.png" alt="services img">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="our-services_item our-services_item-scnd">
+                            <div class="our-services_item-L">
+                                <span class="our-services_item-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                        <mask id="mask0_1538_12205" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+                                          <rect width="48" height="48" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_1538_12205)">
+                                          <path d="M10.7692 42C10.0211 42 9.37258 41.7255 8.82355 41.1764C8.27452 40.6274 8 39.9789 8 39.2308V16.5384C8 15.7904 8.27452 15.1418 8.82355 14.5927C9.37258 14.0437 10.0211 13.7692 10.7692 13.7692H16.2308C16.2308 11.6051 16.9686 9.7692 18.4442 8.2615C19.9199 6.75383 21.7397 6 23.9038 6C26.0948 6 27.9534 6.75 29.4797 8.25C31.0061 9.75 31.7693 11.5897 31.7693 13.7692H37.2308C37.9789 13.7692 38.6274 14.0437 39.1765 14.5927C39.7255 15.1418 40 15.7904 40 16.5384V39.2308C40 39.9789 39.7255 40.6274 39.1765 41.1764C38.6274 41.7255 37.9789 42 37.2308 42H10.7692ZM10.7692 40.4616H37.2308C37.5385 40.4616 37.8205 40.3334 38.077 40.077C38.3333 39.8205 38.4616 39.5385 38.4616 39.2308V16.5384C38.4616 16.2307 38.3333 15.9487 38.077 15.6923C37.8205 15.4359 37.5385 15.3077 37.2308 15.3077H10.7692C10.4615 15.3077 10.1795 15.4359 9.92305 15.6923C9.66665 15.9487 9.53845 16.2307 9.53845 16.5384V39.2308C9.53845 39.5385 9.66665 39.8205 9.92305 40.077C10.1795 40.3334 10.4615 40.4616 10.7692 40.4616ZM17.7693 13.7692H30.2307C30.2307 12.0384 29.625 10.5673 28.4135 9.35575C27.2019 8.14422 25.7308 7.53845 24 7.53845C22.2692 7.53845 20.7981 8.14422 19.5865 9.35575C18.375 10.5673 17.7693 12.0384 17.7693 13.7692ZM23.9968 25.3077C26.0511 25.3077 27.8787 24.5712 29.4795 23.0981C31.0804 21.625 31.8808 19.95 31.8808 18.0731C31.8808 17.8859 31.8077 17.7276 31.6616 17.5981C31.5154 17.4686 31.3271 17.4039 31.0968 17.4039C30.9056 17.4039 30.734 17.484 30.5819 17.6443C30.4299 17.8045 30.3461 17.982 30.3307 18.1769C30.1257 19.7692 29.4237 21.0994 28.225 22.1673C27.0263 23.2353 25.6244 23.7693 24.0193 23.7693C22.4141 23.7693 21.0122 23.2353 19.8135 22.1673C18.6148 21.0994 17.9128 19.7692 17.7077 18.1769C17.6923 18.0077 17.5965 17.8365 17.4202 17.6634C17.2438 17.4904 17.0666 17.4039 16.8885 17.4039C16.6942 17.4039 16.5174 17.4686 16.3581 17.5981C16.1988 17.7276 16.1192 17.8859 16.1192 18.0731C16.1192 19.9523 16.9186 21.6279 18.5173 23.0998C20.116 24.5717 21.9425 25.3077 23.9968 25.3077Z" fill="#2D81F7"/>
+                                        </g>
+                                      </svg>
+                                </span>
+                                <h4 class="our-services_item-title">Актуальный он-лайн каталог: <br>53 категории товаров</h4>
+                                <div class="our-services_item-texts">
+                                    <span class="our-services_item-span">В каталоге размещены товары для комплектации интерьера любой сложности и бюджета.</span>
+                                    <span class="our-services_item-span">Широкий ассортимент позволяет подобрать мебель, электрику, двери и сопутствующие материалы.</span>
+                                    <span class="our-services_item-span">С помощью калькулятора-комплектаций вы сможете рассчитать точную стоимость всех необходимых товаров и материалов.</span>
+                                </div>
+                            </div>
+                            <div class="our-services_item-R">
+                                <picture class="our-services_item-R_pic">
+                                    <img src="./assets/imgs/ourServicesImg02.png" alt="services img">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="our-services_item">
+                            <div class="our-services_item-L">
+                                <span class="our-services_item-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                        <mask id="mask0_1538_12217" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+                                          <rect width="48" height="48" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_1538_12217)">
+                                          <path d="M22.1064 27.8462C23.6919 27.8462 25.0449 27.2889 26.1654 26.1744C27.2859 25.0599 27.8461 23.7099 27.8461 22.1244C27.8461 20.5389 27.2889 19.1859 26.1744 18.0654C25.0599 16.9449 23.7099 16.3846 22.1244 16.3846C20.5389 16.3846 19.1859 16.9419 18.0654 18.0564C16.9449 19.1709 16.3846 20.5209 16.3846 22.1064C16.3846 23.6919 16.9419 25.0449 18.0564 26.1654C19.1709 27.2859 20.5209 27.8462 22.1064 27.8462ZM22.1388 29.3846C20.1027 29.3846 18.3782 28.6782 16.9654 27.2654C15.5526 25.8526 14.8462 24.1359 14.8462 22.1154C14.8462 20.0949 15.5526 18.3782 16.9654 16.9654C18.3782 15.5526 20.0949 14.8461 22.1154 14.8461C24.1359 14.8461 25.8526 15.5526 27.2654 16.9654C28.6782 18.3782 29.3846 20.1027 29.3846 22.1388C29.3846 22.9421 29.2404 23.7295 28.952 24.5008C28.6635 25.2721 28.2603 25.9987 27.7423 26.6807L32.75 31.65C32.8962 31.8008 32.9737 31.9789 32.9827 32.1842C32.9917 32.3896 32.9102 32.5792 32.7384 32.7529C32.5666 32.9228 32.3833 33.0077 32.1884 33.0077C31.9936 33.0077 31.8102 32.9218 31.6384 32.75L26.6807 27.7539C25.9987 28.2718 25.2721 28.6731 24.5008 28.9577C23.7295 29.2423 22.9421 29.3846 22.1388 29.3846ZM10.7692 40C10.0006 40 9.34695 39.7306 8.80815 39.1919C8.26938 38.6531 8 37.9994 8 37.2308V30.9385C8 30.7192 8.0743 30.5362 8.2229 30.3895C8.3715 30.2427 8.55675 30.1693 8.77865 30.1693C9.00058 30.1693 9.1827 30.2427 9.325 30.3895C9.4673 30.5362 9.53845 30.7192 9.53845 30.9385V37.2308C9.53845 37.5385 9.66665 37.8205 9.92305 38.077C10.1795 38.3333 10.4615 38.4616 10.7692 38.4616H17.0615C17.2808 38.4616 17.4638 38.5358 17.6105 38.6844C17.7573 38.833 17.8307 39.0183 17.8307 39.2402C17.8307 39.4621 17.7573 39.6443 17.6105 39.7866C17.4638 39.9289 17.2808 40 17.0615 40H10.7692ZM37.2308 40H30.9384C30.7192 40 30.5362 39.9257 30.3895 39.7771C30.2427 39.6285 30.1693 39.4433 30.1693 39.2213C30.1693 38.9994 30.2427 38.8173 30.3895 38.675C30.5362 38.5327 30.7192 38.4616 30.9384 38.4616H37.2308C37.5385 38.4616 37.8205 38.3333 38.077 38.077C38.3333 37.8205 38.4616 37.5385 38.4616 37.2308V30.9385C38.4616 30.7192 38.5359 30.5362 38.6845 30.3895C38.8331 30.2427 39.0183 30.1693 39.2402 30.1693C39.4621 30.1693 39.6443 30.2427 39.7866 30.3895C39.9289 30.5362 40 30.7192 40 30.9385V37.2308C40 37.9994 39.7306 38.6531 39.1918 39.1919C38.653 39.7306 37.9994 40 37.2308 40ZM8 17.0616V10.7692C8 10.0006 8.26938 9.34695 8.80815 8.80815C9.34695 8.26938 10.0006 8 10.7692 8H17.0615C17.2808 8 17.4638 8.0743 17.6105 8.2229C17.7573 8.3715 17.8307 8.55675 17.8307 8.77865C17.8307 9.00058 17.7573 9.1827 17.6105 9.325C17.4638 9.4673 17.2808 9.53845 17.0615 9.53845H10.7692C10.4615 9.53845 10.1795 9.66665 9.92305 9.92305C9.66665 10.1795 9.53845 10.4615 9.53845 10.7692V17.0616C9.53845 17.2808 9.46415 17.4638 9.31555 17.6105C9.16695 17.7573 8.9817 17.8307 8.7598 17.8307C8.53787 17.8307 8.35575 17.7573 8.21345 17.6105C8.07115 17.4638 8 17.2808 8 17.0616ZM38.4616 17.0616V10.7692C38.4616 10.4615 38.3333 10.1795 38.077 9.92305C37.8205 9.66665 37.5385 9.53845 37.2308 9.53845H30.9384C30.7192 9.53845 30.5362 9.46415 30.3895 9.31555C30.2427 9.16695 30.1693 8.9817 30.1693 8.7598C30.1693 8.53787 30.2427 8.35575 30.3895 8.21345C30.5362 8.07115 30.7192 8 30.9384 8H37.2308C37.9994 8 38.653 8.26938 39.1918 8.80815C39.7306 9.34695 40 10.0006 40 10.7692V17.0616C40 17.2808 39.9257 17.4638 39.7771 17.6105C39.6285 17.7573 39.4433 17.8307 39.2213 17.8307C38.9994 17.8307 38.8173 17.7573 38.675 17.6105C38.5327 17.4638 38.4616 17.2808 38.4616 17.0616Z" fill="#2D81F7"/>
+                                        </g>
+                                      </svg>
+                                </span>
+                                <h4 class="our-services_item-title">Гибкие фильтры поиска товаров <br>и материалов</h4>
+                                <div class="our-services_item-texts">
+                                    <span class="our-services_item-span">Находите нужные товары с помощью умного фильтра. Каждая категория имеет свои характеристики <br>поиска и фильтрации.</span>
+                                    <span class="our-services_item-span">Настраивайте интересующие параметры, сохраняйте фильтры для последующей работы, добавляйте<br> товары в избранное.</span>
+                                    <span class="our-services_item-span">Используйте гибкие настройки фильтров находите<br> и подбирайте подходящие варианты – быстро.</span>
+                                </div>
+                            </div>
+                            <div class="our-services_item-R">
+                                <picture class="our-services_item-R_pic">
+                                    <img src="./assets/imgs/ourServicesImg03.png" alt="services img">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="our-services_item our-services_item-scnd">
+                            <div class="our-services_item-L">
+                                <span class="our-services_item-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                        <mask id="mask0_1538_12236" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+                                          <rect width="48" height="48" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_1538_12236)">
+                                          <path d="M26.8731 41.5731C26.5551 41.891 26.1827 42.05 25.7558 42.05C25.3288 42.05 24.9564 41.891 24.6385 41.5731L6.50385 23.4385C6.32435 23.259 6.1955 23.0693 6.1173 22.8693C6.0391 22.6693 6 22.459 6 22.2384V7.53845C6 7.10768 6.14872 6.74358 6.44615 6.44615C6.74358 6.14872 7.10768 6 7.53845 6H22.2385C22.4333 6 22.6346 6.03268 22.8423 6.09805C23.05 6.16345 23.2436 6.27307 23.4231 6.4269L41.4962 24.5C41.8475 24.8513 42.0295 25.2532 42.0423 25.7057C42.0551 26.1583 41.8987 26.5474 41.5731 26.8731L26.8731 41.5731ZM25.8231 40.5231L40.5231 25.7846L22.2385 7.53845H7.53845V22.2384L25.8231 40.5231ZM12.673 14.4539C13.1679 14.4539 13.5904 14.2724 13.9404 13.9096C14.2904 13.5468 14.4654 13.118 14.4654 12.6231C14.4654 12.1282 14.2904 11.7057 13.9404 11.3557C13.5904 11.0057 13.1679 10.8307 12.673 10.8307C12.1525 10.8307 11.7173 11.0057 11.3673 11.3557C11.0173 11.7057 10.8423 12.1282 10.8423 12.6231C10.8423 13.118 11.0173 13.5468 11.3673 13.9096C11.7173 14.2724 12.1525 14.4539 12.673 14.4539ZM27.0961 32.7346L32.1616 27.4769C32.4513 27.2128 32.6602 26.8942 32.7885 26.5212C32.9167 26.1481 32.9808 25.75 32.9808 25.3269C32.9808 24.491 32.6955 23.7686 32.125 23.1596C31.5545 22.5506 30.8513 22.2461 30.0154 22.2461C29.3231 22.2461 28.6564 22.4308 28.0154 22.8C27.3744 23.1692 26.7308 23.8115 26.0846 24.7269C25.4897 23.8372 24.859 23.2013 24.1923 22.8193C23.5256 22.4372 22.859 22.2461 22.1923 22.2461C21.3564 22.2461 20.6468 22.5506 20.0635 23.1596C19.4801 23.7686 19.1885 24.491 19.1885 25.3269C19.1885 25.75 19.259 26.1481 19.4 26.5212C19.541 26.8942 19.7436 27.2128 20.0077 27.4769L25.0731 32.7346C25.3474 33.0346 25.6846 33.1846 26.0846 33.1846C26.4846 33.1846 26.8218 33.0346 27.0961 32.7346Z" fill="#2D81F7"/>
+                                        </g>
+                                      </svg>
+                                </span>
+                                <h4 class="our-services_item-title">Бонус-карты и промокоды <br>для клиентов</h4>
+                                <div class="our-services_item-texts">
+                                    <span class="our-services_item-span">Выдавайте через сайт электронные карты клиентам, партнёрам, друзьям и знакомым.</span>
+                                    <span class="our-services_item-span">Любой, кто по выданной карте покупает в магазинах-партнёрах, указанных в каталоге – получает скидку, а вы партнёрский бонус.</span>
+                                    <span class="our-services_item-span">Клиент получает скидки и гарантии от поставщиков, а дизайнер вознаграждение.</span>
+                                </div>
+                            </div>
+                            <div class="our-services_item-R">
+                                <picture class="our-services_item-R_pic">
+                                    <img src="./assets/imgs/ourServicesImg04.png" alt="services img">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="our-services_item">
+                            <div class="our-services_item-L">
+                                <span class="our-services_item-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                        <mask id="mask0_1538_12248" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+                                          <rect width="48" height="48" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_1538_12248)">
+                                          <path d="M21.8616 25.1115L18.1616 21.4116C18.1128 21.3628 17.991 21.3769 17.7962 21.4539C17.6013 21.5308 17.4167 21.5974 17.2423 21.6539C17.0679 21.7103 16.9481 21.7365 16.8827 21.7327C16.8173 21.7288 16.8769 21.6218 17.0616 21.4116C16.9154 21.5833 16.8423 21.7667 16.8423 21.9616C16.8423 22.1564 16.9154 22.3398 17.0616 22.5115L20.8885 26.3C21.1885 26.5744 21.5198 26.7115 21.8825 26.7115C22.2452 26.7115 22.5626 26.5744 22.8346 26.3L31.2308 18.2616C31.2308 18.0744 31.2065 17.8782 31.1579 17.6732C31.1092 17.4681 31.0195 17.2959 30.8888 17.1565C30.7298 16.9881 30.5541 16.9039 30.3617 16.9039C30.1693 16.9039 29.982 16.9898 29.8 17.1616L21.8616 25.1115ZM3.53845 38.9231V37.3846H43.6923C43.9115 37.3846 44.0946 37.459 44.2414 37.6075C44.3882 37.7561 44.4616 37.9414 44.4616 38.1633C44.4616 38.3852 44.3882 38.5673 44.2414 38.7097C44.0946 38.8519 43.9115 38.9231 43.6923 38.9231H3.53845ZM8.7692 34.9231C8.00064 34.9231 7.34695 34.6537 6.80815 34.1149C6.26939 33.5761 6 32.9225 6 32.1539V11.6923C6 10.9237 6.26939 10.27 6.80815 9.73125C7.34695 9.19245 8.00064 8.92305 8.7692 8.92305H39.2308C39.9994 8.92305 40.6531 9.19245 41.1919 9.73125C41.7306 10.27 42 10.9237 42 11.6923V32.1539C42 32.9225 41.7306 33.5761 41.1919 34.1149C40.6531 34.6537 39.9994 34.9231 39.2308 34.9231H8.7692ZM8.7692 33.3846H39.2308C39.5385 33.3846 39.8205 33.2564 40.077 33C40.3334 32.7436 40.4616 32.4615 40.4616 32.1539V11.6923C40.4616 11.3846 40.3334 11.1025 40.077 10.8461C39.8205 10.5897 39.5385 10.4616 39.2308 10.4616H8.7692C8.46154 10.4616 8.17949 10.5897 7.92305 10.8461C7.66665 11.1025 7.53845 11.3846 7.53845 11.6923V32.1539C7.53845 32.4615 7.66665 32.7436 7.92305 33C8.17949 33.2564 8.46154 33.3846 8.7692 33.3846Z" fill="#2D81F7"/>
+                                        </g>
+                                      </svg>
+                                </span>
+                                <h4 class="our-services_item-title">Все отчёты и события<br> в едином окне</h4>
+                                <div class="our-services_item-texts">
+                                    <span class="our-services_item-span">Управляйте проектами и сделками – эффективно.</span>
+                                    <span class="our-services_item-span">Отслеживайте свои задачи и процессы, прогнозируйте доход и своевременно получайте вознаграждение. </span>
+                                </div>
+                            </div>
+                            <div class="our-services_item-R">
+                                <picture class="our-services_item-R_pic">
+                                    <img src="./assets/imgs/ourServicesImg05.png" alt="services img">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="our-services_B">
+                        <div class="our-services_B-banner">
+                            <div class="our-services_B-item">
+                                <h4 class="our-services_B-banner_title">Присоединяйтесь к сервису<br> и получайте выгоду</h4>
+                                <span class="our-services_border"></span>
+                                <div class="our-services_B-banner_price">
+                                    <span class="our-services_B-banner_price-cost">0 рублей</span>
+                                    <span class="our-services_B-banner_price-span">Стоимость использования сервиса</span>
+                                </div>
+                                <span class="our-services_border"></span>
+                                <a href="#" class="our-services_B-banner_price-btn">Регистрация</a>
+                                <picture class="our-services_B-banner_pic">
+                                    <img src="./assets/imgs/bannerStar.png" alt="banner star">
+                                </picture>
+                                <span class="our-services_B-banner_span01"></span>
+                                <span class="our-services_B-banner_span02"></span>
+                                <span class="our-services_B-banner_span03"></span>
+                                <span class="our-services_B-banner_span04"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- advantages -->
+        <section class="advantages">
+            <div class="container-main">
+                <div class="advantages_sides">
+                    <div class="advantages_T">
+                        <span class="section_title">Премущества</span>
+                        <h2 class="section_Mtitle">Зарабатывайте в одном месте по одному договору <br>с гарантией и будьте в курсе всех возможностей</h2>
+                    </div>
+                    <div class="advantages_B">
+                        <span class="advantages_B-text">Мы учли весь цикл реализации дизайн-проекта. Разработали удобный и надёжный инструмент для облегчения работы и надёжного заработка.</span>
+                        <div class="advantages_B-item">
+                            <span class="advantages_B-item_info">0 ₽</span>
+                            <span class="advantages_B-item_text">Стоимость использования сервиса</span>
+                        </div>
+                        <div class="advantages_B-item">
+                            <span class="advantages_B-item_info">5 000+</span>
+                            <span class="advantages_B-item_text">Дизайнеров</span>
+                        </div>
+                        <div class="advantages_B-item">
+                            <span class="advantages_B-item_info">412 048 ₽</span>
+                            <span class="advantages_B-item_text">Бонус дизайнера с проекта</span>
+                        </div>
+                        <div class="advantages_B-item">
+                            <span class="advantages_B-item_info">163 637 ₽</span>
+                            <span class="advantages_B-item_text">Экономия клиента</span>
+                        </div>
+                        <div class="advantages_B-item">
+                            <span class="advantages_B-item_info">14</span>
+                            <span class="advantages_B-item_text">Поставщиков в среднем на проект</span>
+                        </div>
+                        <div class="advantages_B-item">
+                            <span class="advantages_B-item_info">226 763+</span>
+                            <span class="advantages_B-item_text">Предложений в базе<br> от поставщиков</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- partners -->
+        <section class="partners">
+            <div class="container-main">
+                <div class="partners_block">
+                    <div class="partners_sides">
+                        <div class="partners_T">
+                            <span class="section_title">Лучшие партнёры</span>
+                            <h2 class="section_Mtitle">Сотрудничаем с лидерами рынка </h2>
+                        </div>
+                        <div class="partners_B">
+                            <div class="partners_B-links">
+                                <a href="#" class="partners_B-link">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg01.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg02.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg03.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg04.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg05.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg06.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg07.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg08.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg09.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg10.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg11.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg12.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link hidden">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg01.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link hidden">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg02.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link hidden">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg03.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link hidden">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg04.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link hidden">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg05.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link hidden">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg06.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link hidden">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg07.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link hidden">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg08.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link hidden">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg09.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link hidden">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg10.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link hidden">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg11.png" alt="partner img">
+                                    </picture>
+                                </a>
+                                <a href="#" class="partners_B-link hidden">
+                                    <picture class="partners_B-link_pic">
+                                        <img src="./assets/imgs/partnersImg12.png" alt="partner img">
+                                    </picture>
+                                </a>
+                            </div>
+                            <a href="#" class="partners_B-btn">Показать всех партнёров</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- partners events -->
+        <section class="partners-events">
+            <div class="container-main">
+                <div class="partners-events_block">
+                    <div class="partners-events_sides">
+                        <div class="partners-events_T">
+                            <h2 class="section_Mtitle">Мероприятия партнёров</h2>
+                            <span class="section_subtitle">Участвуйте в мероприятиях и первыми<br> узнавайте о трендах рынка</span>
+                        </div>
+                        <div class="partners-events_B">
+                            <div class="partners-events_B-sides">
+                                <div class="partners-events_B-L">
+                                    <div class="partners-events_B-L-T">
+                                        <span class="partners-events_B-L-T_title">Мероприятия</span>
+                                        <a href="#" class="partners-events_B-L-T_link">Все мероприятия</a>
+                                    </div>
+                                    <div class="partners-events_B-L-B">
+                                        <div class="partners-events_B-L-B_item">
+                                            <div class="partners-events_B-L-B_item-T">
+                                                <span class="partners-events_B-L-B_item-T_day">Сегодня</span>
+                                                <span class="partners-events_B-L-B_item-T_date">13 ноября</span>
+                                            </div>
+                                            <div class="partners-events_B-L-B_item-B">
+                                                <div class="partners-events_B-L-B_item-B_event">
+                                                    <div class="partners-events_B-L-B_item-B_event-L">
+                                                        <picture class="partners-events_B-L-B_item-B_event-img">
+                                                            <img src="./assets/imgs/eventsImgWiFi.svg" alt="event img">
+                                                        </picture>
+                                                    </div>
+                                                    <div class="partners-events_B-L-B_item-B_event-R">
+                                                        <span class="partners-events_B-L-B_item-B_event-time-and-place">14:30–15:30</span>
+                                                        <span class="partners-events_B-L-B_item-B_event-name">Он-лайн шоурум от “Интерьер-Дизайн”</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="partners-events_B-L-B_item">
+                                            <div class="partners-events_B-L-B_item-T">
+                                                <span class="partners-events_B-L-B_item-T_day">Завтра</span>
+                                                <span class="partners-events_B-L-B_item-T_date">14 ноября</span>
+                                            </div>
+                                            <div class="partners-events_B-L-B_item-B">
+                                                <div class="partners-events_B-L-B_item-B_event">
+                                                    <div class="partners-events_B-L-B_item-B_event-L">
+                                                        <picture class="partners-events_B-L-B_item-B_event-img">
+                                                            <img src="./assets/imgs/eventsImgHome.svg" alt="event img">
+                                                        </picture>
+                                                    </div>
+                                                    <div class="partners-events_B-L-B_item-B_event-R">
+                                                        <span class="partners-events_B-L-B_item-B_event-time-and-place">09:00–17:00 <span>Самарканд</span></span>
+                                                        <span class="partners-events_B-L-B_item-B_event-name">Форум партнёров</span>
+                                                    </div>
+                                                </div>
+                                                <div class="partners-events_B-L-B_item-B_event">
+                                                    <div class="partners-events_B-L-B_item-B_event-L">
+                                                        <picture class="partners-events_B-L-B_item-B_event-img">
+                                                            <img src="./assets/imgs/eventsImgHome.svg" alt="event img">
+                                                        </picture>
+                                                    </div>
+                                                    <div class="partners-events_B-L-B_item-B_event-R">
+                                                        <span class="partners-events_B-L-B_item-B_event-time-and-place">18:00 <span>Москва, Крокус сити, ТК “Твой дом”, корп 2, 4 этаж</span></span>
+                                                        <span class="partners-events_B-L-B_item-B_event-name">Новинки фабрики Hurtado. Обзор шоурумов фабрики в Хай-Пойнт (США) и в Центре мебели и дизайна Neopolis Casa (Москва).</span>
+                                                    </div>
+                                                </div>
+                                                <div class="partners-events_B-L-B_item-B_event">
+                                                    <div class="partners-events_B-L-B_item-B_event-L">
+                                                        <picture class="partners-events_B-L-B_item-B_event-img">
+                                                            <img src="./assets/imgs/eventsImgHome.svg" alt="event img">
+                                                        </picture>
+                                                    </div>
+                                                    <div class="partners-events_B-L-B_item-B_event-R">
+                                                        <span class="partners-events_B-L-B_item-B_event-time-and-place">11:30 <span>Москва, Дениса Давыдова, д. 4, 1 этаж</span></span>
+                                                        <span class="partners-events_B-L-B_item-B_event-name">Завтрак Refin в ArdoStudio. Обсуждение тенденций в мире дизайна и архитектуры. Спикер Алесандро Донио.</span>
+                                                    </div>
+                                                </div>
+                                                <div class="partners-events_B-L-B_item-B_event">
+                                                    <div class="partners-events_B-L-B_item-B_event-L">
+                                                        <picture class="partners-events_B-L-B_item-B_event-img">
+                                                            <img src="./assets/imgs/eventsImgWiFi.svg" alt="event img">
+                                                        </picture>
+                                                    </div>
+                                                    <div class="partners-events_B-L-B_item-B_event-R">
+                                                        <span class="partners-events_B-L-B_item-B_event-time-and-place">14:30–15:30 <span></span></span>
+                                                        <span class="partners-events_B-L-B_item-B_event-name">Он-лайн конференция “Концепция интерьер-дизайна”</span>
+                                                    </div>
+                                                </div>
+                                                <div class="partners-events_B-L-B_item-B_event">
+                                                    <div class="partners-events_B-L-B_item-B_event-L">
+                                                        <picture class="partners-events_B-L-B_item-B_event-img">
+                                                            <img src="./assets/imgs/eventsImgWiFi.svg" alt="event img">
+                                                        </picture>
+                                                    </div>
+                                                    <div class="partners-events_B-L-B_item-B_event-R">
+                                                        <span class="partners-events_B-L-B_item-B_event-time-and-place">14:30–15:30 <span></span></span>
+                                                        <span class="partners-events_B-L-B_item-B_event-name">Он-лайн встреча “Актуальные новинки 2024</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="partners-events_B-R">
+                                    <div class="partners-events_B-R-T">
+                                        <span class="partners-events_B-R-T_title">Новости</span>
+                                        <a href="#" class="partners-events_B-R-T_link">Все новости</a>
+                                    </div>
+                                    <div class="partners-events_B-R-B">
+                                        <div class="partners-events_B-R-B_news">
+                                            <span class="partners-events_B-R-B_news-title">Новые тренды в дизайне интерьеров</span>
+                                            <span class="partners-events_B-R-B_news-text">Тренды в интерьере 2023 года – надежный источник вдохновения при оформлении или обновлении пространства<span>...</span></span>
+                                            <a href="#" class="partners-events_B-R-B_news-link">Читать</a>
+                                        </div>
+                                        <div class="partners-events_B-R-B_news">
+                                            <span class="partners-events_B-R-B_news-title">7 простых способов обновить спальню без ремонта</span>
+                                            <span class="partners-events_B-R-B_news-text">Заменить декор и текстиль, сместить фокус внимания и переставить мебель — собрали простые способы<span>...</span></span>
+                                            <a href="#" class="partners-events_B-R-B_news-link">Читать</a>
+                                        </div>
+                                        <div class="partners-events_B-R-B_news">
+                                            <span class="partners-events_B-R-B_news-title">Интерьер в стиле 1980-х: как это было</span>
+                                            <span class="partners-events_B-R-B_news-text">Химическая завивка, причёски с начёсом, джинсы-варёнки, неоновые спортивные костюмы и синие тени для глаз<span>...</span></span>
+                                            <a href="#" class="partners-events_B-R-B_news-link">Читать</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- services -->
+        <section class="our-services our-services_banner-Only">
+            <div class="container-main">
+                <div class="our-services_block">
+                    <div class="our-services_B">
+                        <div class="our-services_B-banner">
+                            <div class="our-services_B-item">
+                                <h4 class="our-services_B-banner_title">Присоединяйтесь к сервису<br> и получайте выгоду</h4>
+                                <span class="our-services_border"></span>
+                                <div class="our-services_B-banner_price">
+                                    <span class="our-services_B-banner_price-cost">0 рублей</span>
+                                    <span class="our-services_B-banner_price-span">Стоимость использования сервиса</span>
+                                </div>
+                                <span class="our-services_border"></span>
+                                <a href="#" class="our-services_B-banner_price-btn">Регистрация</a>
+                                <picture class="our-services_B-banner_pic">
+                                    <img src="./assets/imgs/bannerStar.png" alt="banner star">
+                                </picture>
+                                <span class="our-services_B-banner_span01"></span>
+                                <span class="our-services_B-banner_span02"></span>
+                                <span class="our-services_B-banner_span03"></span>
+                                <span class="our-services_B-banner_span04"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container-main">
+            <div class="footer_block">
+                <div class="footer_sides">
+                    <div class="footer_T">
+                        <div class="footer_T-item">
+                            <a href="#" class="footer_T-logo">DeliSkidku.ru</a>
+                            <a href="#" class="footer_T-designs_link">Сообщество дизайнеров</a>
+                            <p class="footer_T-text">Cотрудничаем с большим количеством торговых <br>и производственных организаций, работающих <br>в сфере строительства.</p>
+                            <div class="footer_T-contacts">
+                                <span>Контакты:</span>
+                                <a href="tel:+74951253377" class="footer_T-tel">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <mask id="mask0_1538_12668" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                          <rect width="24" height="24" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_1538_12668)">
+                                          <path d="M18.9308 20C17.2449 20 15.5167 19.5779 13.7462 18.7337C11.9756 17.8894 10.3308 16.7045 8.81152 15.1789C7.29229 13.6532 6.11057 12.0083 5.26635 10.2442C4.42212 8.48012 4 6.75512 4 5.06922C4 4.76372 4.1 4.50915 4.3 4.3055C4.5 4.10183 4.75 4 5.05 4H7.52308C7.79488 4 8.03206 4.08557 8.23463 4.25672C8.43719 4.42787 8.57437 4.64742 8.64615 4.91537L9.1423 7.3C9.18847 7.57948 9.18013 7.82372 9.1173 8.0327C9.05448 8.24167 8.94359 8.41282 8.78463 8.54615L6.59037 10.5923C7.00064 11.3372 7.45418 12.0292 7.95098 12.6683C8.44776 13.3074 8.97756 13.9128 9.54037 14.4846C10.1212 15.0654 10.7462 15.6055 11.4154 16.1048C12.0846 16.6042 12.8192 17.0756 13.6192 17.5192L15.7577 15.3423C15.9205 15.1667 16.1035 15.051 16.3067 14.9952C16.5099 14.9394 16.7346 14.9282 16.9808 14.9615L19.0846 15.3923C19.3564 15.459 19.5769 15.5958 19.7462 15.8029C19.9154 16.0099 20 16.2474 20 16.5154V18.95C20 19.25 19.8982 19.5 19.6945 19.7C19.4909 19.9 19.2363 20 18.9308 20ZM6.12115 9.65385L8.04037 7.88845C8.10447 7.83717 8.14614 7.76666 8.16537 7.67693C8.18461 7.58718 8.18141 7.50384 8.15577 7.42693L7.71152 5.3077C7.68589 5.20513 7.64103 5.12821 7.57693 5.07693C7.51283 5.02564 7.42949 5 7.32693 5H5.275C5.19808 5 5.13398 5.02564 5.0827 5.07693C5.03142 5.12821 5.00578 5.19231 5.00578 5.26922C5.02501 5.95256 5.13206 6.66603 5.32692 7.40963C5.52179 8.15321 5.78653 8.90128 6.12115 9.65385ZM14.5712 17.9884C15.2468 18.3231 15.967 18.5705 16.7317 18.7308C17.4965 18.891 18.1628 18.9769 18.7308 18.9884C18.8077 18.9884 18.8718 18.9628 18.9231 18.9116C18.9744 18.8603 19 18.7962 19 18.7192V16.7116C19 16.609 18.9744 16.5257 18.9231 16.4616C18.8718 16.3974 18.7949 16.3526 18.6923 16.3269L16.8423 15.9481C16.7654 15.9224 16.6981 15.9192 16.6404 15.9385C16.5827 15.9577 16.5218 15.9994 16.4577 16.0635L14.5712 17.9884Z" fill="#2D81F7"/>
+                                        </g>
+                                      </svg>
+                                    <span>+7 (495) 125-33-77</span>
+                                </a>
+                                <a href="mailto:info@deliskidku.ru" class="footer_T-mail">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <mask id="mask0_1538_12673" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                          <rect width="24" height="24" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_1538_12673)">
+                                          <path d="M4.61538 19C4.15513 19 3.77083 18.8458 3.4625 18.5375C3.15417 18.2292 3 17.8449 3 17.3846V6.61537C3 6.15512 3.15417 5.77083 3.4625 5.4625C3.77083 5.15417 4.15513 5 4.61538 5H19.3846C19.8449 5 20.2292 5.15417 20.5375 5.4625C20.8458 5.77083 21 6.15512 21 6.61537V17.3846C21 17.8449 20.8458 18.2292 20.5375 18.5375C20.2292 18.8458 19.8449 19 19.3846 19H4.61538ZM20 6.88463L12.4481 11.8288C12.3776 11.866 12.3061 11.8971 12.2337 11.9221C12.1612 11.9471 12.0833 11.9596 12 11.9596C11.9167 11.9596 11.8388 11.9471 11.7663 11.9221C11.6939 11.8971 11.6224 11.866 11.5519 11.8288L4 6.88463V17.3846C4 17.5641 4.05769 17.7115 4.17308 17.8269C4.28846 17.9423 4.43589 18 4.61538 18H19.3846C19.5641 18 19.7115 17.9423 19.8269 17.8269C19.9423 17.7115 20 17.5641 20 17.3846V6.88463ZM12 11L19.6923 6H4.3077L12 11ZM4 7.09615V6.28463V6.31922V6.26828V7.09615Z" fill="#2D81F7"/>
+                                        </g>
+                                      </svg>
+                                    <span>info@deliskidku.ru</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer_T-item">
+                            <a href="#" class="footer_T-item_Mlink">Меню</a>
+                            <div class="footer_T-item_links">
+                                <a href="#" class="footer_T-item_link">Главная</a>
+                                <a href="#" class="footer_T-item_link">Каталог</a>
+                                <a href="#" class="footer_T-item_link">Возможности</a>
+                                <a href="#" class="footer_T-item_link">Мероприятия</a>
+                                <a href="#" class="footer_T-item_link">Новости</a>
+                                <a href="#" class="footer_T-item_link">Частые вопросы</a>
+                                <a href="#" class="footer_T-item_link">О сервисе</a>
+                                <a href="#" class="footer_T-item_link">Контакты</a>
+                            </div>
+                        </div>
+                        <div class="footer_T-item">
+                            <a href="#" class="footer_T-item_Mlink">Пользователям</a>
+                            <div class="footer_T-item_links">
+                                <a href="#" class="footer_T-item_link">Помощь</a>
+                                <a href="#" class="footer_T-item_link">Документация</a>
+                                <a href="#" class="footer_T-item_link">Правила программы лояльности</a>
+                                <a href="#" class="footer_T-item_link">Условия начисления баллов</a>
+                                <a href="#" class="footer_T-item_link">Публичная оферта</a>
+                                <a href="#" class="footer_T-item_link">Пользовательское соглашение</a>
+                                <a href="#" class="footer_T-item_link">Политика конфиденциальности</a>
+                                <a href="#" class="footer_T-item_link">Политика обработки и защиты<br> персональных данных</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_B">
+                        <span class="copyright">2023 © deliskidku.ru</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./assets/js/jQuery-3.7.1.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
